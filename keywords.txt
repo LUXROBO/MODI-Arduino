@@ -1,0 +1,145 @@
+#######################################
+# Syntax Coloring Map For MODI
+#######################################
+
+#######################################
+# Class (KEYWORD1)
+#######################################
+
+# MODI Class
+MODI	KEYWORD1
+
+# Input Module Class
+Environment	KEYWORD1
+Gyro	KEYWORD1
+Mic	KEYWORD1
+Button	KEYWORD1
+Dial	KEYWORD1
+Ultrasonic	KEYWORD1
+Infrared	KEYWORD1
+
+# Output Module Class
+Display	KEYWORD1
+Motor	KEYWORD1
+LED	KEYWORD1
+Speaker	KEYWORD1
+
+# Set up Module Class
+Network	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+# methods names in commond
+# Common function name in MODI
+begin	KEYWORD2
+addRequest	KEYWORD2
+# Input Module Function
+# 1.Environment
+readIlluminance	KEYWORD2
+readRed	KEYWORD2
+readGreen	KEYWORD2
+readBlue	KEYWORD2
+readTemperature	KEYWORD2
+readHumidity	KEYWORD2
+# 2.Gyro
+readRoll	KEYWORD2
+readPitch	KEYWORD2
+readYaw	KEYWORD2
+readGyro_X	KEYWORD2
+readGyro_Y	KEYWORD2
+readGyro_Z	KEYWORD2
+readAccel_X	KEYWORD2
+readAccel_Y	KEYWORD2
+readAccel_Z	KEYWORD2
+readVibration	KEYWORD2
+# 3. Mic
+readVolume	KEYWORD2
+readFreq	KEYWORD2
+# 4. Button
+readClick	KEYWORD2
+readDoubleClick	KEYWORD2
+readPushState	KEYWORD2
+readToggle	KEYWORD2
+writeToggle	KEYWORD2
+# 5. Dial
+readDegree	KEYWORD2
+readTurnSpeed	KEYWORD2
+# 6. Ultrasonic
+readDistance	KEYWORD2
+# 7. Infrared
+readProximity	KEYWORD2
+# Output Module Function
+# 1. Display
+writePosition	KEYWORD2
+writeText	KEYWORD2
+writeDots	KEYWORD2
+writePicture	KEYWORD2
+resetDisplay	KEYWORD2
+writeVariable	KEYWORD2
+writeHorizontal	KEYWORD2
+writeVertical	KEYWORD2
+# 2. Motor
+readTorque_Upper	KEYWORD2
+readTorque_Bottom	KEYWORD2
+readSpeed_Upper	KEYWORD2
+readSpeed_Bottom	KEYWORD2
+readAngle_Upper	KEYWORD2
+readAngle_Bottom	KEYWORD2
+readSenseSpeed_Upper	KEYWORD2
+readSenseSpeed_Bottom	KEYWORD2
+readSenseAngle_Upper	KEYWORD2
+readSenseAngle_Bottom	KEYWORD2
+writeTorque_Upper	KEYWORD2
+writeTorque_Bottom	KEYWORD2
+writeSpeed_Upper	KEYWORD2
+writeSpeed_Bottom	KEYWORD2
+writeAngle_Upper	KEYWORD2
+writeAngle_Bottom	KEYWORD2
+writeTorque	KEYWORD2
+writeSpeed	KEYWORD2
+writeAngle	KEYWORD2
+# 3. LED
+readRed	KEYWORD2
+readGreen	KEYWORD2
+readBlue	KEYWORD2
+writeRed	KEYWORD2
+writeGreen	KEYWORD2
+writeBlue	KEYWORD2
+writeRGB	KEYWORD2
+# 4. Speaker
+readVolume	KEYWORD2
+readFreq	KEYWORD2
+writeVolume	KEYWORD2
+writeFreq	KEYWORD2
+writeTune	KEYWORD2
+writeSoundEffect	KEYWORD2
+writeMelody	KEYWORD2
+# Setup Module Function
+readData	KEYWORD2
+readEvent	KEYWORD2
+writeData	KEYWORD2
+writeEvent	KEYWORD2
+
+
+#######################################
+# PREPROCESSOR (KEYWORD3)
+#######################################
+# Serial output
+MODI_PRINT	KEYWORD3
+MODI_PRINTLN	KEYWORD3
+MODI_PRINT_F	KEYWORD3
+
+#######################################
+# CONSTANTS (LITERAL1)
+#######################################
+# Debug Mode
+MODI_DEBUG_MODE	LITERAL1
+
+# MODI Pin
+MODI_INT_PIN	LITERAL1
+MODI_CS_PIN	LITERAL1
+MODI_DIR_PIN	LITERAL1
+
+# Request
