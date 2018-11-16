@@ -1098,7 +1098,7 @@ void Display::writePosition(int16_t X, int16_t Y)
 	data[1] = ((X >> 0xFF00U) >> 8);
 	data[2] = ((Y >> 0x00FFU) >> 0);
 	data[3] = ((Y >> 0xFF00U) >> 8);
-	setProperty64(key(),PROP_DISPLAY_RESET,data);
+	setProperty(key(),PROP_DISPLAY_RESET,data);
 	return;
 }
 /*
@@ -1145,7 +1145,7 @@ void Display::writePicture(char keyword[])
 			break;
 		}
 	}
-	setProperty64(key(),PROP_DISPLAY_DRAW_VARIABLE,value);
+	setProperty(key(),PROP_DISPLAY_DRAW_VARIABLE,value);
 	return;
 }
 /*

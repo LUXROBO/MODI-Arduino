@@ -143,7 +143,7 @@ void PropertySender::setDisplay48(uint16_t destID, uint16_t pNum, char value[])
         {
             display_1line[j] = value[j + (i*8)];
         }
-        setProperty64(destID,pNum,display_1line);
+        setProperty(destID,pNum,display_1line);
         delay(1);
     }
 }
