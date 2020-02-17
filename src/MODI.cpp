@@ -17,7 +17,7 @@ namespace modi
     MCP_CAN CAN(MODI_CS_PIN);
 }
 /*
- *  @Func  :
+ *  @Func  : MODI_Manager
  *  @Brief :
  *  @Param :
  *  @RetVal:
@@ -27,7 +27,7 @@ MODI_Manager::MODI_Manager()
 	modulecnt = 0;
 }
 /*
- *  @Func  :
+ *  @Func  : begin
  *  @Brief :
  *  @Param :
  *  @RetVal:
@@ -52,10 +52,10 @@ void MODI_Manager::begin(void)
 		setModulePnP(MODI.moduleID[cnt],MODULE_PNP_OFF);
 	}
 	/* Set Direction pin as input */
-	pinMode(MODI_DIR_PIN,INPUT);
+	//pinMode(MODI_DIR_PIN,INPUT);
 }
 /*
- *  @Func  :
+ *  @Func  : begin
  *  @Brief :
  *  @Param :
  *  @RetVal:
@@ -352,6 +352,46 @@ uint32_t Network::readEvent(void)
  *  @Param :
  *  @RetVal:
  */
+uint32_t Network::readSlider_Left(void)
+{
+	return getPropertyInt(key(),PROP_NETWORK_SLIDER_LEFT);
+}
+/*
+ *  @Func  :
+ *  @Brief :
+ *  @Param :
+ *  @RetVal:
+ */
+uint32_t Network::readSlider_Right(void)
+{
+	return getPropertyInt(key(),PROP_NETWORK_SLIDER_RIGHT);
+}
+/*
+ *  @Func  :
+ *  @Brief :
+ *  @Param :
+ *  @RetVal:
+ */
+uint32_t Network::readDialTurn(void)
+{
+	return getPropertyInt(key(),PROP_NETWORK_DIAL);
+}
+/*
+ *  @Func  :
+ *  @Brief :
+ *  @Param :
+ *  @RetVal:
+ */
+uint32_t Network::readTimeout(void)
+{
+	return getPropertyInt(key(),PROP_NETWORK_TIMER);
+}
+/*
+ *  @Func  :
+ *  @Brief :
+ *  @Param :
+ *  @RetVal:
+ */
 void Network::writeData(int32_t data)
 {
 	setProperty(key(), PROP_NETWORK_DATA, data);
@@ -366,6 +406,17 @@ void Network::writeData(int32_t data)
 void Network::writeEvent(int32_t data)
 {
 	setProperty64(key(),PROP_NETWORK_EVENT,data);
+	return;
+}
+/*
+ *  @Func  :
+ *  @Brief :
+ *  @Param :
+ *  @RetVal:
+ */
+void Network::writeCamera(int32_t data)
+{
+	setProperty64(key(),PROP_NETWORK_CAM,data);
 	return;
 }
 
@@ -1094,10 +1145,10 @@ void Display::writeState(uint8_t state)
 void Display::writePosition(int16_t X, int16_t Y)
 {
 	uint8_t data[8];
-	data[0] = ((X >> 0x00FFU) >> 0);
-	data[1] = ((X >> 0xFF00U) >> 8);
-	data[2] = ((Y >> 0x00FFU) >> 0);
-	data[3] = ((Y >> 0xFF00U) >> 8);
+	data[0] = ((X & 0x00FFU) >> 0);
+	data[1] = ((X & 0xFF00U) >> 8);
+	data[2] = ((Y & 0x00FFU) >> 0);
+	data[3] = ((Y & 0xFF00U) >> 8);
 	setProperty(key(),PROP_DISPLAY_RESET,data);
 	return;
 }

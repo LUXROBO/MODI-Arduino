@@ -22,7 +22,7 @@
 #define MODI_DEBUG_MODE 1
 
 /* */
-#define MODI_MAX_MODULE_NUM 5
+#define MODI_MAX_MODULE_NUM 2
 
 /* Pin out for Arduino MKR Series */
 #if defined(ARDUINO_ARCH_SAMD)
@@ -51,6 +51,7 @@
 #else
     #define MODI_PRINT(...) 
     #define MODI_PRINTLN(...)
+    #define MODI_PRINT_F(...)
 #endif
 
 class Module
@@ -122,9 +123,14 @@ class Network :public Module, public PropertySender
 
     uint32_t readData(void);
     uint32_t readEvent(void);
+    uint32_t readSlider_Left(void);
+    uint32_t readSlider_Right(void);
+    uint32_t readDialTurn(void);
+    uint32_t readTimeout(void);
 
     void writeData(int32_t data);
     void writeEvent(int32_t data);
+    void writeCamera(int32_t data);
 };
 
 /* 1. Environment Module */

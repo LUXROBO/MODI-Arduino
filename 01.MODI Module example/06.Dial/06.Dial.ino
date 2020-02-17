@@ -21,7 +21,6 @@ void setup() {
 
 void loop() {
   Serial.println("===============");
- 
   Serial.print("Dial :");
   Serial.println(dial1.readDegree());
   Serial.print("Dial Turn Speed :");

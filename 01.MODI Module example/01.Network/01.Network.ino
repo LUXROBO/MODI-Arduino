@@ -21,30 +21,30 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if(network1.readEvent() == 1)
+  if(network1.readEvent() == EVENT_BUTTON_PRESSED)
   {
     Serial.println("Button Pressed");
-    network1.writeEvent(1); // buzzer on
+    network1.writeEvent(EVENT_BUZZER_ON); // buzzer on
   }
-  else if(network1.readEvent() == 2) // joystick up
+  else if(network1.readEvent() == EVENT_JOYSTICK_UP) // joystick up
   {
     Serial.println("Joystick Up Pressed");
   }
-  else if(network1.readEvent() == 3) // joystick down
+  else if(network1.readEvent() == EVENT_JOYSTICK_DOWN) // joystick down
   {
     Serial.println("Joystick Down Pressed");
   }
-  else if(network1.readEvent() == 4) // joystick right
+  else if(network1.readEvent() == EVENT_JOYSTICK_RIGHT) // joystick right
   {
     Serial.println("Joystick Right Pressed");
   }
-  else if(network1.readEvent() == 5) // joystick left
+  else if(network1.readEvent() == EVENT_JOYSTICK_LEFT) // joystick left
   {
     Serial.println("Joystick Left Pressed");
   }
   else
   {
-    network1.writeEvent(0); // buzzer off
+    network1.writeEvent(EVENT_BUZZER_OFF); // buzzer off
   }
   delay(100);
 }

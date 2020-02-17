@@ -20,8 +20,7 @@ void setup() {
 
 void loop() {
   Serial.println("===============");
- 
-  Serial.print("Dial :");
+  Serial.print("Ultra :");
   Serial.println(ultra1.readDistance());
   delay(100);
 }

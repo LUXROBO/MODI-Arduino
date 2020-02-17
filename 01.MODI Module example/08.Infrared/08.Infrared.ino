@@ -20,7 +20,6 @@ void setup() {
 
 void loop() {
   Serial.println("===============");
- 
   Serial.print("Proximity :");
   Serial.println(ir1.readProximity());
   delay(100);

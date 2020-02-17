@@ -1,7 +1,7 @@
 #include <MODI.h>
 
-const unsigned int BUTTON_ID    = 0xF55; // please modify id to your module's id
-const unsigned int MOTOR_ID     = 0xB5;
+const unsigned int BUTTON_ID    = 0xAC0; // please modify id to your module's id
+const unsigned int MOTOR_ID     = 0x84C;
 
 /* module */
 Button button1;

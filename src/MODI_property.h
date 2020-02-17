@@ -89,6 +89,21 @@
 
 #define PROP_NETWORK_DATA                   2
 #define PROP_NETWORK_EVENT                  3
+#define PROP_NETWORK_JOYSTICK               3
+#define PROP_NETWORK_DIAL                   4
+#define PROP_NETWORK_SLIDER_LEFT            5
+#define PROP_NETWORK_SLIDER_RIGHT           6
+#define PROP_NETWORK_TIMER                  7
+#define PROP_NETWORK_CAM                    257
+
+#define EVENT_BUTTON_PRESSED                100                        
+#define EVENT_JOYSTICK_UP                   20	
+#define EVENT_JOYSTICK_DOWN                 30
+#define EVENT_JOYSTICK_RIGHT                40
+#define EVENT_JOYSTICK_LEFT                 50
+
+#define EVENT_BUZZER_ON                     1
+#define EVENT_BUZZER_OFF                    0
 
 #define MODULE_PNP_OFF                      0
 #define MODULE_PNP_ON                       1
